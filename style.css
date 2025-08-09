@@ -164,7 +164,7 @@ section {
 
 #perfil-section .all-texto-sobre .titulo {
     font-size: 1.5rem;
-    font-style: italic;
+    /* font-style: italic; */
 }
 
 #perfil-section .all-texto-sobre .texto-sobre {
