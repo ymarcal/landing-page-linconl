@@ -125,7 +125,8 @@ section {
     align-items: center;
     text-align: justify;
     gap: 1.5rem;
-    background-color: #5cc1a1;
+    /* background-color: #5cc1a1; */
+    background-image: linear-gradient(135deg, rgba(37,96,102,1) , #5cc1a1);
     color: var(--text-color1);
 }
 
@@ -135,10 +136,7 @@ section {
     overflow: hidden;
     margin-top: 1rem;
     margin-bottom: 37px;
-    /* border-radius: 50%; */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-
-    /* Experimente com estes valores para criar a forma orgânica */
     border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
 }
 
