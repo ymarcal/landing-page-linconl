@@ -1,0 +1,450 @@
+/* Base Styles */
+:root {
+    --text-color1: #ffffff;
+    --text-color2: #256066;
+    --link-color: #1a1c20;
+    --background-color1: #ceeded;
+    --background-color2: #f1f0f0;
+    font-size: 17px; /* Set the base font size */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* Adjust this value based on the height of your nav bar */
+}
+
+/* Para aplicar a fonte Fraunces em todos os títulos h1 e h2 */
+h1, h2 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    /* margin-bottom: 0.5rem; */
+    font-family: 'Fraunces', serif;
+}
+
+/* Para aplicar em um elemento com uma classe específica */
+.destaque {
+  font-family: 'Fraunces', serif;
+  font-weight: 700; /* Use um dos pesos que você selecionou */
+}
+
+/* Para usar como fonte principal do site */
+body {
+  font-family: 'Fraunces', serif;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav {
+    background-color: #256066;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 15rem;
+    height: 4rem;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(37,96,102,1);
+    backdrop-filter: blur(5px);
+}
+
+nav .right {
+    /* text-align: right; */
+    display: flex;
+    align-items: end;
+}
+
+nav .left a {
+    color: var(--text-color1);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+nav .left a:hover {
+    color: var(--link-color);
+    transition: color 0.3s ease-in-out;
+}
+
+nav .right a {
+    color: var(--text-color1);
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 0.625rem;
+}
+
+nav .right a:hover {
+    color: var(--link-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.hamburger {
+    display: none; /* Esconde o ícone hambúrguer em telas grandes */
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.hamburger i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* General Section Styles */
+section {
+    width: 100%;
+    padding: 3rem 12rem 3rem;
+    /* padding: 5rem 2rem 2rem; */
+    min-height: 80vh; /* Reduce the default minimum height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    gap: 2rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#perfil-section {
+    min-height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5rem;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    gap: 1.5rem;
+    /* background-color: #5cc1a1; */
+    background-image: linear-gradient(135deg, rgba(37,96,102,1) , #5cc1a1);
+    color: var(--text-color1);
+}
+
+#perfil-section .foto-perfil {
+    width: 20rem;
+    height: 28rem;
+    overflow: hidden;
+    margin-top: 1rem;
+    margin-bottom: 37px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+}
+
+#perfil-section .foto-perfil img {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50%; */
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+#perfil-section .foto-perfil img:hover {
+    transform: scale(1.2);
+}
+
+#perfil-section .all-texto-sobre {
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+    max-width: 35.25rem;
+    display: grid;
+    gap: 2rem;
+}
+
+#perfil-section .all-texto-sobre .titulo {
+    font-size: 1.5rem;
+    /* font-style: italic; */
+}
+
+#perfil-section .all-texto-sobre .texto-sobre {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.div-btn-saber-mais {
+    margin: auto;
+    width: 8rem;
+    background-color: #256066;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+
+#abordagem-section {
+    color: var(--text-color2);
+    flex-direction: row;
+    gap: 7rem;
+}
+
+.abordagem-texto {
+    padding-left: 5rem;
+}
+
+#abordagem-section h2 {
+    text-align: left;
+}
+
+#abordagem-section p{
+    width: 31rem;
+}
+
+#abordagem-section .foto-atendimento {
+    width: 68rem;
+    height: 28rem;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+}
+
+#abordagem-section .foto-atendimento img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+#beneficios-section {
+    background-color: var(--background-color1);
+    color: var(--text-color2);
+}
+
+.titulo-beneficios {
+    padding-right: 7rem;
+    text-align: left;
+    align-self: flex-end;
+    width: 30rem;
+}
+
+#beneficios-section h2 {
+    text-align: right;
+}
+
+/* O contêiner que agrupa os três cards */
+#beneficios-section .cards {
+    display: flex;         /* ESSENCIAL: Alinha os cards lado a lado */
+    justify-content: center; /* Centraliza o grupo de cards na página */
+    gap: 2rem;             /* Cria um espaço entre os cards */
+    flex-wrap: wrap;         /* Permite que os cards quebrem para a linha de baixo em telas menores */
+    margin-top: 3rem;      /* Espaço abaixo do título "Pilares..." */
+    align-self: center;
+}
+
+/* Estilo para cada card individual */
+#beneficios-section .card {
+    background-color: var(--background-color1);
+    display: flex;
+    flex-direction: column; /* Empilha o conteúdo do card (ícone, título, texto) verticalmente */
+    align-items: left;    /* Centraliza o conteúdo do card horizontalmente */
+    text-align: justify;
+    
+    background-color: var(--background-color1);
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);*/ /* Sombra suave */
+    max-width: 350px; /* Largura máxima para cada card */
+
+    /* ADICIONE ESTA LINHA PARA A ANIMAÇÃO */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+#beneficios-section .card .card-icon {
+    width: 4rem; /* Defina a largura do ícone */
+    height: 4rem; /* Defina a altura do ícone */
+    margin-bottom: 0.5rem; /* Espaço abaixo do ícone */
+
+    /* AQUI ESTÁ A MUDANÇA IMPORTANTE: Use 'fill' para colorir o SVG */
+    fill: #256066; /* Cor dos ícones */
+
+    /* Adicione uma transição se quiser um efeito de hover */
+    transition: fill 0.3s ease;
+}
+
+/* Adicione esta nova regra ao final do seu CSS */
+
+#beneficios-section .card:hover {
+    /* Move o card 10 pixels para cima */
+    transform: translateY(-10px);
+
+    /* Aumenta a sombra para dar mais profundidade */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os títulos (h3) dentro dos cards */
+#beneficios-section .card h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para os parágrafos (p) dentro dos cards */
+#beneficios-section .card p {
+    font-family: 'Montserrat', sans-serif; /* Usando uma fonte mais legível para o corpo */
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+#contato-section {
+    min-height: 70vh;
+    justify-content: space-between;
+    background-color: var(--background-color2);
+    color: var(--text-color2);
+}
+
+.container-titulo-contato {
+    width: 100%;
+}
+
+.titulo-contato {
+    display: flex;
+    align-self: self-start;
+    width: 19rem;
+}
+
+.contatos {
+    display: flex;
+    flex-direction: column;
+    align-self: self-end;
+    gap: 2rem;
+}
+
+.contato-item {
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    font-size: 2rem;
+    gap: 1rem;
+}
+
+footer {
+    text-align: right;
+}
+
+@media only screen and (max-width: 1200px) {
+    nav {
+        padding: 0 2rem;
+    }
+    section {
+        padding: 3rem 2rem 3rem;
+    }
+    #abordagem-section .foto-atendimento {
+        width: 100%;
+        height: 20rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    nav {
+        padding: 0 1rem;
+    }
+    section {
+        padding: 2rem 1rem 2rem;
+    }
+    #perfil-section {
+        flex-direction: column;
+        padding-top: 5rem;
+        gap: 1rem;
+        text-align: center;
+    }
+    #perfil-section .foto-perfil {
+        width: 14rem;
+        height: 14rem;
+        margin-bottom: 1rem;
+    }
+    #perfil-section .all-texto-sobre {
+        padding: 0;
+        max-width: 100%;
+    }
+    #abordagem-section {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        padding: 2rem 0 2rem;
+    }
+    #abordagem-section .foto-atendimento {
+        width: 100%;
+        height: 14rem;
+        border-radius: 0;
+    }
+    .abordagem-texto {
+        padding-left: 0;
+        width: 100%;
+    }
+    #abordagem-section p {
+        width: 100%;
+    }
+    .titulo-beneficios {
+        padding-right: 0;
+        width: 100%;
+        text-align: center;
+        align-self: center;
+    }
+    #beneficios-section .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    #beneficios-section .card {
+        max-width: 100%;
+        width: 100%;
+    }
+    #contato-section {
+        padding: 2rem 1rem;
+        min-height: 50vh;
+    }
+    .contatos {
+        align-self: stretch;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 0 0.5rem;
+    }
+    nav .left a {
+        font-size: 1.1rem;
+    }
+    nav .right a {
+        font-size: 0.9rem;
+        margin: 0 0.25rem;
+    }
+    section {
+        padding: 1.5rem 0.5rem 1.5rem;
+        min-height: unset;
+    }
+    #perfil-section .foto-perfil {
+        width: 10rem;
+        height: 10rem;
+    }
+    h1, h2 {
+        font-size: 2rem;
+    }
+    #beneficios-section .card {
+        padding: 1.2rem 0.8rem;
+    }
+    .contato-item h3 {
+        font-size: 1.1rem;
+    }
+    .contato-item p {
+        font-size: 1rem;
+    }
+    .social-links {
+        font-size: 1.5rem;
+    }
+    .div-btn-saber-mais {
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+}
